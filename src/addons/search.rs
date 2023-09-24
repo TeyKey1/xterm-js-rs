@@ -35,11 +35,8 @@ extern "C" {
     pub fn dispose(this: &SearchAddon);
 
     #[wasm_bindgen(method, method, js_name = "findNext")]
-    pub fn find_next(
-        this: &SearchAddon,
-        term: &str,
-        search_options: Option<SearchOptions>,
-    ) -> bool;
+    pub fn find_next(this: &SearchAddon, term: &str, search_options: Option<SearchOptions>)
+        -> bool;
 
     #[wasm_bindgen(method, method, js_name = "findPrevious")]
     pub fn find_previous(
@@ -53,7 +50,6 @@ impl SearchOptions {
     pub fn new() -> Self {
         js_sys::Object::new().unchecked_into()
     }
-
 
     pub fn with_regex(&self, val: bool) -> &Self {
         self.set_regex(val);

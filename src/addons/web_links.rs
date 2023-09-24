@@ -1,4 +1,4 @@
-use crate::{LinkMatcherOptions, TerminalAddon, Terminal};
+use crate::{LinkMatcherOptions, Terminal, TerminalAddon};
 use js_sys::Function;
 use wasm_bindgen::prelude::*;
 
